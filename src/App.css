@@ -66,9 +66,6 @@
   text-align: center;
   padding: 0.125rem 0.5rem;
   height: 1.25rem;
-  min-width: 30px;
-  width: unset; /* 기존 auto 제거 */
-  max-width: 100px; /* 너무 길어지는 경우 방지 */
 }
 
 .result-box {

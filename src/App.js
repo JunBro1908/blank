@@ -79,7 +79,6 @@ function App() {
                     className="blank-input"
                     style={{
                       width: `${Math.max(part.length * 16, 30)}px`,
-                      minWidth: "30px",
                     }}
                     value={userInputs[Math.floor(index / 2)] || ""}
                     onChange={(e) =>
