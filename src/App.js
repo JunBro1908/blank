@@ -84,7 +84,14 @@ function App() {
               입력: {item.user || "(빈칸)"} / 정답: {item.expected}
             </p>
           ))}
-          <Button onClick={() => setQuizText("")}>다시 하기</Button>
+          <Button
+            onClick={() => {
+              setUserInputs(new Array(answers.length).fill("")); // 입력값 초기화
+              setResult(null); // 정답 결과 초기화
+            }}
+          >
+            다시 하기
+          </Button>
         </div>
       )}
     </div>
