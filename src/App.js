@@ -67,7 +67,7 @@ function App() {
       {quizText && (
         <div className="quiz-box">
           <p className="quiz-text">
-            {originalText.split(/\((.*?)\)/g).map((part, index) =>
+            {originalText.split(/\<(.*?)\>/g).map((part, index) =>
               index % 2 === 0 ? (
                 part
               ) : (
