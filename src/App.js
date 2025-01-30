@@ -78,6 +78,11 @@ function App() {
                   <Input
                     className="blank-input"
                     style={{
+                      display: "inline-block",
+                      borderBottom: "1px solid black",
+                      textAlign: "center",
+                      padding: "0.125rem 0.5rem",
+                      height: "1.25rem",
                       width: `${Math.max(part.length * 16, 30)}px`,
                     }}
                     value={userInputs[Math.floor(index / 2)] || ""}

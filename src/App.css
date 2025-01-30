@@ -60,14 +60,6 @@
   border-radius: 50%;
 }
 
-.blank-input {
-  display: inline-block;
-  border-bottom: 1px solid black;
-  text-align: center;
-  padding: 0.125rem 0.5rem;
-  height: 1.25rem;
-}
-
 .result-box {
   padding: 1rem;
   border: 1px solid #ccc;
