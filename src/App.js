@@ -19,7 +19,7 @@ function App() {
       return;
     }
 
-    const bracketParts = originalText.match(/\((.*?)\)/g) || [];
+    const bracketParts = originalText.match(/<(.*?)>/g) || [];
     const cleanedParts = bracketParts.map((part) => part.replace(/[()]/g, ""));
     setAnswers(cleanedParts);
     setUserInputs(new Array(cleanedParts.length).fill(""));
