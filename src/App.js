@@ -1,8 +1,8 @@
 import logo from "./logo.svg";
 import "./App.css";
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Button } from "./components/ui/button";
+import { Input } from "./components/ui/input";
 
 function App() {
   const [originalText, setOriginalText] = useState("");
