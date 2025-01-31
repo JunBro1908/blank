@@ -24,7 +24,7 @@
 
 /* 입력창 스타일 */
 .textarea-input {
-  width: 100%; /* 부모의 너비를 모두 차지 */
+  width: 80%; /* 부모의 너비를 모두 차지 */
   padding: 1rem;
   border: 1px solid #ccc;
   border-radius: 0.5rem;
