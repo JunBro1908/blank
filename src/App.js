@@ -110,8 +110,12 @@ function App() {
                 key={item.number}
                 className={item.correct ? "correct" : "incorrect"}
               >
-                <span className="font-bold">[{item.number}번]</span> 입력:{" "}
-                {item.user || "(빈칸)"} / 정답: {item.expected}
+                <span className="font-bold">[{item.number}번]</span>
+                <span style={{ color: "black" }}>
+                  {" "}
+                  입력: {item.user || "(빈칸)"}{" "}
+                </span>{" "}
+                / 정답: {item.expected}
               </p>
             ))}
             <Button
