@@ -5,6 +5,7 @@
   margin: 0 auto;
   display: flex;
   flex-direction: row;
+  gap: 20px;
   gap: 1rem;
   align-items: flex-start; /* 컨텐츠 정렬 */
 }
@@ -34,7 +35,7 @@
 
 /* 버튼 스타일 */
 .button {
-  width: 130px; /* 부모 크기에 맞춤 */
+  max-width: 100px; /* 부모 크기에 맞춤 */
   padding: 0.5rem 1rem;
   background-color: #007bff;
   color: white;
@@ -56,6 +57,7 @@
   flex-direction: row;
   padding: 1rem;
   background-color: white;
+  gap: 20px;
 }
 
 /* 문제 박스 */
