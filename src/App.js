@@ -39,7 +39,9 @@ function App() {
       number: index + 1,
       expected: answer,
       user: userInputs[index] || "",
-      correct: answer.trim() === (userInputs[index] || "").trim(),
+      correct:
+        answer.replace(/\s+/g, "") ===
+        (userInputs[index] || "").replace(/\s+/g, ""),
     }));
     setResult(feedback);
   };
