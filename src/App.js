@@ -88,25 +88,12 @@ function App() {
                         textAlign: "center",
                         padding: "0.125rem 0.5rem",
                         height: "1.25rem",
-                        width: `${Math.max(part.length * 16, 30)}px`,
+                        width: `${Math.max(part.length * 16, 30)}px !important`,
                       }}
                       value={userInputs[Math.floor(index / 2)] || ""}
                       onChange={(e) =>
                         handleInputChange(Math.floor(index / 2), e.target.value)
                       }
-                      onKeyDown={(e) => {
-                        if (e.key === "Enter") {
-                          e.preventDefault(); // 기본 엔터 동작 방지 (폼 제출 X)
-                          const nextIndex = Math.floor(index / 2) + 1; // 다음 빈칸 인덱스 계산
-                          const nextInput = document.getElementById(
-                            `input-${nextIndex}`
-                          );
-                          if (nextInput) {
-                            nextInput.focus(); // 다음 입력 필드로 포커스 이동
-                          }
-                        }
-                      }}
-                      id={`input-${Math.floor(index / 2)}`} // ID 추가하여 선택 가능하게 설정
                     />
                   </span>
                 )

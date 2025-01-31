@@ -34,7 +34,7 @@
 
 /* 버튼 스타일 */
 .button {
-  width: 100%; /* 부모 크기에 맞춤 */
+  width: 130px; /* 부모 크기에 맞춤 */
   padding: 0.5rem 1rem;
   background-color: #007bff;
   color: white;
@@ -73,11 +73,19 @@
   white-space: pre-wrap;
 }
 
-/* 입력칸 */
 .blank-wrapper {
-  position: relative;
-  display: inline-block;
+  display: flex;
+  align-items: center; /* 수직 정렬 */
+  gap: 0.5rem; /* 빈칸과 정답 간격 추가 */
   margin: 0 0.25rem;
+}
+
+/* 정답 확인 부분을 가로 정렬 */
+.result-box p {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* 수직 정렬 */
+  gap: 0.5rem; /* 요소 간 간격 */
 }
 
 /* 입력 칸의 숫자 */
@@ -94,15 +102,6 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-}
-
-/* 정답 확인 박스 */
-.result-box {
-  padding: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 0.5rem;
-  margin-top: 1rem;
-  background-color: #f8f9fa;
 }
 
 /* 정답 확인 텍스트 */
