@@ -48,7 +48,7 @@ function App() {
     <div className="quiz-container">
       <textarea
         className="textarea-input"
-        placeholder="여기에 문장을 입력하세요 (예: 나는 <막내>를 좋아해)"
+        placeholder="여기에 문장을 입력하세요 (예: 나는 /막내/를 좋아해)"
         value={originalText}
         onChange={(e) => {
           setOriginalText(e.target.value);

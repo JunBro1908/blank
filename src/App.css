@@ -1,14 +1,14 @@
 .quiz-container {
   padding: 1.5rem;
-  max-width: 40rem;
+  max-width: 80rem;
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 1rem;
 }
 
 .textarea-input {
-  width: 100%;
+  width: 20rem;
   padding: 1rem;
   border: 1px solid #ccc;
   border-radius: 0.5rem;
@@ -47,6 +47,7 @@
 }
 
 .quiz-area {
+  flex: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
