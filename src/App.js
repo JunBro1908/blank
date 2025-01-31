@@ -46,24 +46,26 @@ function App() {
 
   return (
     <div className="quiz-container">
-      <textarea
-        className="textarea-input"
-        placeholder="여기에 문장을 입력하세요 (예: 나는 /막내/를 좋아해)"
-        value={originalText}
-        onChange={(e) => {
-          setOriginalText(e.target.value);
-          if (!e.target.value.trim()) {
-            setQuizText("");
-            setAnswers([]);
-            setUserInputs([]);
-            setResult(null);
-          }
-        }}
-        rows={4}
-      />
-      <Button className="button" onClick={handleTextSubmit}>
-        문제 만들기
-      </Button>
+      <div classname="side">
+        <textarea
+          className="textarea-input"
+          placeholder="여기에 문장을 입력하세요 (예: 나는 /막내/를 좋아해)"
+          value={originalText}
+          onChange={(e) => {
+            setOriginalText(e.target.value);
+            if (!e.target.value.trim()) {
+              setQuizText("");
+              setAnswers([]);
+              setUserInputs([]);
+              setResult(null);
+            }
+          }}
+          rows={4}
+        />
+        <Button className="button" onClick={handleTextSubmit}>
+          문제 만들기
+        </Button>
+      </div>
       <div className="quiz-area">
         {quizText && (
           <div className="quiz-box">
