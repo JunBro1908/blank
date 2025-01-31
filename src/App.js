@@ -84,7 +84,7 @@ function App() {
                         textAlign: "center",
                         padding: "0.125rem 0.5rem",
                         height: "1.25rem",
-                        width: `${Math.max(part.length * 16, 30)}px`,
+                        width: `${Math.max(part.length * 16, 30)}px !important`,
                       }}
                       value={userInputs[Math.floor(index / 2)] || ""}
                       onChange={(e) =>
