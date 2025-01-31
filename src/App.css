@@ -37,12 +37,19 @@
 
 .quiz-text {
   line-height: 1.5;
+  white-space: pre-wrap;
 }
 
 .blank-wrapper {
   position: relative;
   display: inline-block;
   margin: 0 0.25rem;
+}
+
+.quiz-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
 .blank-number {

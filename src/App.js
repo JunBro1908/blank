@@ -64,64 +64,66 @@ function App() {
       <Button className="button" onClick={handleTextSubmit}>
         문제 만들기
       </Button>
-      {quizText && (
-        <div className="quiz-box">
-          <p className="quiz-text">
-            {originalText.split(/\<(.*?)\>/g).map((part, index) =>
-              index % 2 === 0 ? (
-                part
-              ) : (
-                <span key={index} className="blank-wrapper">
-                  <span className="blank-number">
-                    {Math.floor(index / 2) + 1}
+      <div className="quiz-area">
+        {quizText && (
+          <div className="quiz-box">
+            <p className="quiz-text">
+              {originalText.split(/\<(.*?)\>/g).map((part, index) =>
+                index % 2 === 0 ? (
+                  part
+                ) : (
+                  <span key={index} className="blank-wrapper">
+                    <span className="blank-number">
+                      {Math.floor(index / 2) + 1}
+                    </span>
+                    <Input
+                      className="blank-input"
+                      style={{
+                        display: "inline-block",
+                        borderBottom: "1px solid black",
+                        textAlign: "center",
+                        padding: "0.125rem 0.5rem",
+                        height: "1.25rem",
+                        width: `${Math.max(part.length * 16, 30)}px`,
+                      }}
+                      value={userInputs[Math.floor(index / 2)] || ""}
+                      onChange={(e) =>
+                        handleInputChange(Math.floor(index / 2), e.target.value)
+                      }
+                    />
                   </span>
-                  <Input
-                    className="blank-input"
-                    style={{
-                      display: "inline-block",
-                      borderBottom: "1px solid black",
-                      textAlign: "center",
-                      padding: "0.125rem 0.5rem",
-                      height: "1.25rem",
-                      width: `${Math.max(part.length * 16, 30)}px`,
-                    }}
-                    value={userInputs[Math.floor(index / 2)] || ""}
-                    onChange={(e) =>
-                      handleInputChange(Math.floor(index / 2), e.target.value)
-                    }
-                  />
-                </span>
-              )
-            )}
-          </p>
-          <Button className="button" onClick={checkAnswers}>
-            정답 확인
-          </Button>
-        </div>
-      )}
-      {result && quizText && (
-        <div className="result-box">
-          <h3 className="result-text">정답 확인</h3>
-          {result.map((item) => (
-            <p
-              key={item.number}
-              className={item.correct ? "correct" : "incorrect"}
-            >
-              <span className="font-bold">[{item.number}번]</span> 입력:{" "}
-              {item.user || "(빈칸)"} / 정답: {item.expected}
+                )
+              )}
             </p>
-          ))}
-          <Button
-            className="button"
-            onClick={() => {
-              setUserInputs(new Array(answers.length).fill("")); // 입력값 초기화
-              setResult(null); // 정답 결과 초기화
-            }}
-          >
-            다시 하기
-          </Button>
-        </div>
-      )}
+            <Button className="button" onClick={checkAnswers}>
+              정답 확인
+            </Button>
+          </div>
+        )}
+        {result && quizText && (
+          <div className="result-box">
+            <h3 className="result-text">정답 확인</h3>
+            {result.map((item) => (
+              <p
+                key={item.number}
+                className={item.correct ? "correct" : "incorrect"}
+              >
+                <span className="font-bold">[{item.number}번]</span> 입력:{" "}
+                {item.user || "(빈칸)"} / 정답: {item.expected}
+              </p>
+            ))}
+            <Button
+              className="button"
+              onClick={() => {
+                setUserInputs(new Array(answers.length).fill("")); // 입력값 초기화
+                setResult(null); // 정답 결과 초기화
+              }}
+            >
+              다시 하기
+            </Button>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
