@@ -80,14 +80,6 @@
   margin: 0 0.25rem;
 }
 
-/* 정답 확인 부분을 가로 정렬 */
-.result-box p {
-  display: flex;
-  flex-direction: row;
-  align-items: center; /* 수직 정렬 */
-  gap: 0.5rem; /* 요소 간 간격 */
-}
-
 /* 입력 칸의 숫자 */
 .blank-number {
   position: absolute;
