@@ -1,7 +1,7 @@
 /* 전체 컨테이너 */
 .quiz-container {
   padding: 1.5rem;
-  max-width: 100rem;
+  width: 100vw;
   margin: 0 auto;
   display: flex;
   flex-direction: row;

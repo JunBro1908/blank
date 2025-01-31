@@ -106,7 +106,7 @@ function App() {
         )}
         {result && quizText && (
           <div className="result-box">
-            <h3 className="result-text">정답 확인</h3>
+            <h3 className="result-text">답지</h3>
             {result.map((item) => (
               <p
                 key={item.number}
@@ -127,7 +127,7 @@ function App() {
                 setResult(null); // 정답 결과 초기화
               }}
             >
-              다시 하기
+              다시 풀기
             </Button>
           </div>
         )}
