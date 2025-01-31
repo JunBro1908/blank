@@ -19,8 +19,8 @@ function App() {
       return;
     }
 
-    const bracketParts = originalText.match(/\<(.*?)\>/g) || [];
-    const cleanedParts = bracketParts.map((part) => part.replace(/[<>]/g, ""));
+    const bracketParts = originalText.match(/\/(.*?)\//g) || [];
+    const cleanedParts = bracketParts.map((part) => part.replace(/[//]/g, ""));
     setAnswers(cleanedParts);
     setUserInputs(new Array(cleanedParts.length).fill(""));
 
@@ -68,7 +68,7 @@ function App() {
         {quizText && (
           <div className="quiz-box">
             <p className="quiz-text">
-              {originalText.split(/\<(.*?)\>/g).map((part, index) =>
+              {originalText.split(/\/(.*?)\//g).map((part, index) =>
                 index % 2 === 0 ? (
                   part
                 ) : (
